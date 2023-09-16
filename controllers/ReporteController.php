@@ -4,6 +4,7 @@ namespace Controllers;
 
 use Mpdf\Mpdf;
 use MVC\Router;
+use Model\Venta;
 
 class ReporteController {
     public static function pdf (Router $router){

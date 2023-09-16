@@ -20,10 +20,4 @@
     </form>
 </div>
 
-
-
-
-
-
-
 <script src="build/js/ventas/index.js"></script>
