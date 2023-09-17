@@ -45,13 +45,144 @@ const buscar = async () => {
                 icon: 'info'
             });
         } else {
-            Toast.fire({
-                title: 'Se encontraron registros exitosamente',
-                icon: 'success'
-            });
+            // Toast.fire({
+            //     title: 'Se encontraron registros exitosamente',
+            //     icon: 'success'
+            // });
+            generarPDF(data);
         }
     } catch (error) {
         console.log(error);
+    }
+};
+
+
+// const generarPDF = () => {
+//     const url = `/reporte_pdf/reporte/generarPDF`;
+
+//     // Abre la URL en una nueva ventana o pestaña
+//     window.open(url, '_blank');
+// };
+
+// const generarPDF = async (datos) => {
+//     const url = `/reporte_pdf/reporte/generarPDF`;
+
+//     const config = {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(datos),
+//     };
+
+//     try {
+//         const respuesta = await fetch(url, config);
+
+//         if (respuesta.ok) {
+//             const blob = await respuesta.blob();
+
+//             if (blob) {
+//                 const urlBlob = window.URL.createObjectURL(blob);
+
+//                 // Crear un enlace y abrirlo en una nueva ventana o pestaña
+//                 const a = document.createElement('a');
+//                 a.href = urlBlob;
+//                 a.target = '_blank';
+//                 a.style.display = 'none'; // Ocultar el enlace
+//                 document.body.appendChild(a);
+
+//                 a.click(); // Simular un clic en el enlace
+
+//                 // Eliminar el enlace después de abrirlo
+//                 document.body.removeChild(a);
+//             } else {
+//                 console.error('No se pudo obtener el blob del PDF.');
+//             }
+//         } else {
+//             console.error('Error al generar el PDF.');
+//         }
+//     } catch (error) {
+//         console.error(error);
+//     }
+// };
+
+
+
+// const generarPDF = async (datos) => {
+//     const url = `${window.location.origin}/reporte_pdf/reporte/generarPDF`;
+
+//     const config = {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(datos),
+//     };
+
+//     try {
+//         const respuesta = await fetch(url, config);
+
+//         if (respuesta.ok) {
+//             const blob = await respuesta.blob();
+
+//             if (blob) {
+//                 const urlBlob = window.URL.createObjectURL(blob);
+
+//                 // Crear un enlace y abrirlo en una nueva ventana o pestaña
+//                 const a = document.createElement('a');
+//                 a.href = urlBlob;
+//                 a.target = '_blank';
+//                 a.style.display = 'none'; // Ocultar el enlace
+//                 document.body.appendChild(a);
+
+//                 a.click(); // Simular un clic en el enlace
+
+//                 // Eliminar el enlace después de abrirlo
+//                 document.body.removeChild(a);
+//             } else {
+//                 console.error('No se pudo obtener el blob del PDF.');
+//             }
+//         } else {
+//             console.error('Error al generar el PDF.');
+//         }
+//     } catch (error) {
+//         console.error(error);
+//     }
+// };
+
+
+
+
+const generarPDF = async (datos) => {
+    const url = `/reporte_pdf/reporte/generarPDF`;
+
+    const config = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(datos),
+    };
+
+    try {
+        const respuesta = await fetch(url, config);
+
+        if (respuesta.ok) {
+            const blob = await respuesta.blob();
+
+            if (blob) {
+                const urlBlob = window.URL.createObjectURL(blob);
+
+                // Abre el PDF en una nueva ventana o pestaña
+                window.open(urlBlob, '_blank');
+            } else {
+                console.error('No se pudo obtener el blob del PDF.');
+            }
+        } else {
+            console.error('Error al generar el PDF.');
+        }
+    } catch (error) {
+        console.error(error);
     }
 };
 

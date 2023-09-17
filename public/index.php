@@ -15,5 +15,9 @@ $router->get('/ventas', [VentaController::class,'index']);
 $router->get('/API/ventas/buscar', [VentaController::class,'buscarAPI'] );
 $router->get('/pdf', [ReporteController::class,'pdf']);
 
+$router->post('/reporte/generarPDF', [ReporteController::class, 'generarPDF']);
+
+
+
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();
