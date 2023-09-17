@@ -12,6 +12,7 @@ $router->setBaseURL('/' . $_ENV['APP_NAME']);
 
 $router->get('/', [AppController::class,'index']);
 $router->get('/ventas', [VentaController::class,'index']);
+$router->get('/API/ventas/buscar', [VentaController::class,'buscarAPI'] );
 $router->get('/pdf', [ReporteController::class,'pdf']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
