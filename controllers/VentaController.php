@@ -19,7 +19,6 @@ class VentaController
     {
         $venta_fecha_inicio = $_GET['venta_fecha_inicio'];
         $venta_fecha_fin = $_GET['venta_fecha_fin'];
-        // Formatear las fechas en el formato YYYY-MM-DD
         // Formatear las fechas en el formato YYYY-MM-DD HH:MM
         $fechaInicioFormateada = date('Y-m-d H:i', strtotime($venta_fecha_inicio));
         $fechaFinFormateada = date('Y-m-d H:i', strtotime($venta_fecha_fin));
@@ -44,16 +43,6 @@ class VentaController
         try {
             // Ejecutar la consulta SQL para obtener datos de ventas en el rango de fechas.
             $ventas = Venta::fetchArray($sql);
-    
-            // Crear una respuesta JSON con los resultados o un mensaje de "No se encontraron registros"
-            // $response = empty($ventas) ?
-            //     [
-            //         'mensaje' => 'No se encontraron registros',
-            //         'codigo' => 1
-            //     ] :
-            //     $ventas;
-            //echo json_encode($ventas);
-    
             echo json_encode($ventas);
         } catch (Exception $e) {
             echo json_encode([
