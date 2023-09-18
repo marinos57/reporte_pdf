@@ -45,7 +45,10 @@ const buscar = async () => {
                 icon: 'info'
             });
         } else {
-        
+            Toast.fire({
+              title: 'Se esta generando el pdf',
+             icon: 'success'
+            });
             generarPDF(data);
         }
     } catch (error) {
