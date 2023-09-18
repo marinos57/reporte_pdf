@@ -26,15 +26,18 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/reporte_pdf/"><i class="bi bi-house-fill me-2"></i>Inicio</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/reporte_pdf/ventas"><i class="bi bi-cart-fill me-2"></i>FORMULARIO PARA BUSCAR VENTAS</a>
+                    </li>
   
                     <div class="nav-item dropdown " >
-                        <a class="nav-link dropdown-toggle" href="/reporte_pdf/ventas" data-bs-toggle="dropdown">
-                            <i class="bi bi-gear me-2"></i>FORMULARIO PARA BUSCAR VENTAS
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="bi bi-gear me-2"></i>Dropdown
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark "id="dropwdownRevision" style="margin: 0;">
                             <!-- <h6 class="dropdown-header">Información</h6> -->
                             <li>
-                                <a class="dropdown-item nav-link text-white " href="/aplicaciones/nueva"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Subitem</a>
+                                <a class="dropdown-item nav-link text-white " href="/reporte_pdf/ventas"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>FORMULARIO PARA BUSCAR VENTAS</a>
                             </li>
                         
                     
