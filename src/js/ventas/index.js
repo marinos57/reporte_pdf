@@ -44,12 +44,14 @@ const buscar = async () => {
                 title: 'No se encontraron registros',
                 icon: 'info'
             });
+            formulario.reset()
         } else {
             Toast.fire({
               title: 'Se esta generando el pdf',
              icon: 'success'
             });
             generarPDF(data);
+            formulario.reset()
         }
     } catch (error) {
         console.log(error);
