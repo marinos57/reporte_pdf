@@ -18,7 +18,7 @@
             </button>
             <a class="navbar-brand" href="/reporte_pdf/">
                 <img src="<?= asset('./images/cit.png') ?>" width="35px'" alt="cit" >
-                Aplicaciones
+                REPORTE VENTAS
             </a>
             <div class="collapse navbar-collapse" id="navbarToggler">
                 
@@ -28,8 +28,8 @@
                     </li>
   
                     <div class="nav-item dropdown " >
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            <i class="bi bi-gear me-2"></i>Dropdown
+                        <a class="nav-link dropdown-toggle" href="/reporte_pdf/ventas" data-bs-toggle="dropdown">
+                            <i class="bi bi-gear me-2"></i>FORMULARIO PARA BUSCAR VENTAS
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark "id="dropwdownRevision" style="margin: 0;">
                             <!-- <h6 class="dropdown-header">Información</h6> -->
